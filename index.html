@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.57, minimum-scale=0.57, maximum-scale=0.57"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script src="/src/index.js" type="module"></script>
+  </head>
+  <body id="app">
+    <section id="large-play">
+      <span id="large-play-container">
+        <i class="fas fa-play" id="large-play-icon"></i>
+      </span>
+    </section>
+
+    <section class="background-color-header" id="background-color-header">
+      <div class="background-color-header-container">
+        <div class="background-color-title-container">
+          <h3 class="background-color-title" id="background-color-title">
+            Background Color Gradient
+          </h3>
+        </div>
+
+        <section class="rotate-background-container">
+          <div class="rotate-left" id="rotate-left">
+            <i class="fas fa-undo-alt"></i>
+          </div>
+          <div class="rotate-right" id="rotate-right">
+            <i class="fas fa-redo-alt"></i>
+          </div>
+        </section>
+
+        <div class="color-picker-container-1">
+          <label for="color-picker-1" id="color-picker-label-1">
+            <input type="color" id="color-picker-1" value="#0C0C0C" />
+            <i class="fas fa-palette"></i>
+          </label>
+        </div>
+
+        <div class="color-picker-container-2">
+          <label for="color-picker-2" id="color-picker-label-2">
+            <input type="color" id="color-picker-2" value="#181818" />
+
+            <i class="fas fa-palette"></i>
+          </label>
+        </div>
+
+        <div class="color-picker-container-3">
+          <label for="color-picker-3" id="color-picker-label-3">
+            <input type="color" id="color-picker-3" value="#242424" />
+
+            <i class="fas fa-palette"></i>
+          </label>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="left-sidebar" id="left-sidebar">
+      <div class="left-sidebar-container">
+        <div
+          class="visualizer-option-1 active-visualizer"
+          id="bar-graph-button"
+          data="Vertical Bars"
+        >
+          <span>1</span>
+        </div>
+        <div
+          class="visualizer-option-2"
+          id="horizontal-bar-button"
+          data="Horizontal Bars"
+        >
+          <span>2</span>
+        </div>
+        <div
+          class="visualizer-option-3"
+          id="circle-graph-button"
+          data="Center Circles"
+        >
+          <span>3</span>
+        </div>
+        <div
+          class="visualizer-option-4"
+          id="circle-linear-button"
+          data="Line Circles"
+        >
+          <span>4</span>
+        </div>
+        <div
+          class="visualizer-option-5"
+          id="symetrical-line-button"
+          data="Symetrical Lines"
+        >
+          <span>5</span>
+        </div>
+        <div
+          class="visualizer-option-6"
+          id="symetrical-circle-button"
+          data="Symetrical Circles"
+        >
+          <span>6</span>
+        </div>
+        <div
+          class="visualizer-option-7"
+          id="full-screen-button"
+          data="Full Screen Bars"
+        >
+          <span>7</span>
+        </div>
+        <div
+          class="visualizer-option-8"
+          id="waveform-linear-button"
+          data="Waveform Lines"
+        >
+          <span>8</span>
+        </div>
+        <div
+          class="visualizer-option-9"
+          id="waveform-circle-button"
+          data="Waveform Circles"
+        >
+          <span>9</span>
+        </div>
+
+        <h3 id="visualizer-title">Visualizations</h3>
+      </div>
+    </section>
+    <section class="right-sidebar" id="right-sidebar">
+      <div class="right-sidebar-container">
+        <h3 class="colors-title" id="colors-title">Colors</h3>
+
+        <div
+          class="color-option-1 active-color"
+          id="rainbow-button"
+          data="Rainbow"
+        >
+          <span>1</span>
+        </div>
+        <div class="color-option-2" id="plasma-button" data="Plasma">
+          <span>2</span>
+        </div>
+        <div class="color-option-3" id="viridis-button" data="Viridis">
+          <span>3</span>
+        </div>
+        <div class="color-option-4" id="sinebow-button" data="Sinebow">
+          <span>4</span>
+        </div>
+        <div class="color-option-5" id="spectral-button" data="Spectral">
+          <span>5</span>
+        </div>
+        <div class="color-option-6" id="cubehelix-button" data="Cubehelix">
+          <span>6</span>
+        </div>
+        <div class="color-option-7" id="ylorrd-button" data="Red Orange Yellow">
+          <span>7</span>
+        </div>
+        <div class="color-option-8" id="ylgnbu-button" data="Blue Green Yellow">
+          <span>8</span>
+        </div>
+        <div class="color-option-9" id="greys-button" data="Black Grey White">
+          <span>9</span>
+        </div>
+      </div>
+    </section>
+    <section class="right-gain-bar" id="right-gain-bar">
+      <div class="right-gain-container">
+        <div class="gain-container">
+          <div class="gain-bar-container">
+            <div id="gain-bar"></div>
+            <div id="gain-bar-value"></div>
+          </div>
+        </div>
+        <h3 class="gain-title" id="gain-title">Gain</h3>
+      </div>
+    </section>
+
+    <section id="demo-button-container">
+      <div id="demo-button">Demo Song</div>
+    </section>
+
+    <footer class="footer-audio-player" id="footer-audio-player">
+      <section class="footer-audio-container">
+        <div class="play-pause">
+          <i class="fas fa-play" id="play-pause"></i>
+        </div>
+        <div class="file-input">
+          <input
+            type="file"
+            id="file-input"
+            accept="audio/*, .m4a, .mp3, .wav, .flac .ogg, .aac"
+          />
+          <div class="file-input-container">
+            <label for="file-input" id="file-input-label"
+              >Choose a local file for visualizer</label
+            >
+          </div>
+        </div>
+        <div id="track-name"></div>
+
+        <div id="time-progress"></div>
+
+        <div class="playbar-container">
+          <div id="playbar"></div>
+          <div id="playbar-progress"></div>
+        </div>
+        <div id="time-left"></div>
+        <div class="full-screen">
+          <span
+            id="full-screen-container"
+            data="Enter Full-Screen, or press [F]"
+          >
+            <i class="fas fa-arrows-alt"></i>
+          </span>
+        </div>
+      </section>
+    </footer>
+    <audio id="audio"></audio>
+
+    <section id="keyboard-modal">
+      <div class="keyboard-modal-container">
+        <div class="center-modal-title">Keyboard Controls</div>
+        <br />
+        <div class="center-modal">
+          In addtion to on-screen controls,
+          <span class="modal-italicize">Anonymous visualizer</span> supports a wide
+          range of keyboard shortcuts:
+        </div>
+        <br />
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>Spacebar</td>
+            <td>Play / Pause Audio</td>
+          </tr>
+          <tr>
+            <td>Left-Arrow</td>
+            <td>Seek audio 5 seconds backwards</td>
+          </tr>
+          <tr>
+            <td>Right-Arrow</td>
+            <td>Seek audio 5 seconds forward</td>
+          </tr>
+          <tr>
+            <td>Up-Arrow</td>
+            <td>Increase gain (volume) by 10 percent</td>
+          </tr>
+          <tr>
+            <td>Down-arrow</td>
+            <td>Decrease gain (volume) by 10 percent</td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td>Enter / Exit fullscreen mode</td>
+          </tr>
+          <tr>
+            <td>W</td>
+            <td>Previous visualizer design, based on associated number</td>
+          </tr>
+          <tr>
+            <td>S</td>
+            <td>Next visualizer design, based on associated number</td>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>Previous visualizer color, based on associated number</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>Next visualizer color, based on associated number</td>
+          </tr>
+          <tr>
+            <td>R</td>
+            <td>Set random three-color background gradient</td>
+          </tr>
+          <tr>
+            <td>Q</td>
+            <td>Rotate background left 45 degrees</td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td>Rotate background right 45 degrees</td>
+          </tr>
+        </table>
+
+        <div id="keyboard-close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

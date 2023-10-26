@@ -1,0 +1,110 @@
+.left-sidebar  {
+    position: fixed;
+    left: 0;
+    bottom: 44px;
+    width: 36px;
+    background-color: rgb(129, 0, 0);
+    color: rgb(0, 0, 0);
+    border-top: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+#left-sidebar {
+    transition: 1s;
+}
+
+.left-sidebar-container {
+    position: relative;
+}
+
+.left-sidebar-container > h3 {
+    transform: rotate(-90deg);
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    padding: 11px 11px;
+    letter-spacing: 0.1em;
+    left: -64px;
+    bottom: -100px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.left-sidebar-container > h3:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+
+.left-sidebar-container > h3:hover:after {
+    transform: rotate(90deg);
+    text-transform: none;
+    letter-spacing: normal;
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    top: 97px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 12px;
+    font-weight: 600;
+    content: "Next visualizer, or use [W] & [S] keys to cycle";
+    left: 68px;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 100;
+    width: 130px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.left-sidebar-container > div {
+    height: 36px;
+    width: 36px;
+    transition: 0.2s;
+    position: relative;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.left-sidebar-container > div > span {
+    position: absolute;
+    left: 37%;
+    top: 28%;
+}
+
+.left-sidebar-container > div:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+    cursor: pointer;
+}
+
+.left-sidebar-container > div:hover:after {
+    background: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    bottom: 5px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 12px;
+    font-weight: 600;
+    content: attr(data);
+    white-space: nowrap; 
+    left: 40px;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 100;
+    transition: 0.2s;
+}
+
+.active-visualizer {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.visualizer-option-9 {
+    margin-bottom: 162px;
+}
+
+
